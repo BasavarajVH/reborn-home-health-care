@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,44 +16,35 @@ import AdminLayout from "./admin/AdminLayout";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
+      {/* Website */}
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/services/:slug" element={<ServiceDetails />} />
+      <Route path="/booking" element={<Booking />} />
+      <Route path="/contact" element={<Contact />} />
 
-        {/* Website */}
+      {/* Admin Login */}
+      <Route path="/admin/login" element={<Login />} />
 
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:slug" element={<ServiceDetails />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/contact" element={<Contact />} />
+      {/* Redirect /admin */}
+      <Route
+        path="/admin"
+        element={<Navigate to="/admin/login" replace />}
+      />
 
-        {/* Admin Login */}
+      {/* Admin Panel */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="appointments" element={<Appointments />} />
+        <Route path="patients" element={<Patients />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
 
-        <Route path="/admin/login" element={<Login />} />
-
-        {/* Redirect /admin */}
-
-        <Route
-          path="/admin"
-          element={<Navigate to="/admin/login" replace />}
-        />
-
-        {/* Admin */}
-
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="appointments" element={<Appointments />} />
-          <Route path="patients" element={<Patients />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
-
-        {/* Unknown */}
-
-        <Route path="*" element={<Navigate to="/" replace />} />
-
-      </Routes>
-    </BrowserRouter>
+      {/* Unknown Route */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 
