@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 import Login from "./admin/Login";
 import Dashboard from "./admin/Dashboard";
 import Appointments from "./admin/Appointments";
-import Patients from "./admin/Patients";
+import Patients from "./admin/patients";
 import Settings from "./admin/Settings";
 import AdminLayout from "./admin/AdminLayout";
 
