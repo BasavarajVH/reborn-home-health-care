@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
+import { FaPhoneAlt, FaBars, FaTimes, FaUserShield } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -21,14 +21,26 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 font-medium">
-          <Link to="/" className="hover:text-blue-600">Home</Link>
-          <Link to="/about" className="hover:text-blue-600">About</Link>
-          <Link to="/services" className="hover:text-blue-600">Services</Link>
-          <Link to="/contact" className="hover:text-blue-600">Contact</Link>
+          <Link to="/" className="hover:text-blue-600 transition">
+            Home
+          </Link>
+
+          <Link to="/about" className="hover:text-blue-600 transition">
+            About
+          </Link>
+
+          <Link to="/services" className="hover:text-blue-600 transition">
+            Services
+          </Link>
+
+          <Link to="/contact" className="hover:text-blue-600 transition">
+            Contact
+          </Link>
         </nav>
 
-        {/* Desktop Right Side */}
+        {/* Desktop Right */}
         <div className="hidden md:flex items-center gap-4">
+
           <div className="flex items-center gap-2 text-green-600 font-semibold">
             <FaPhoneAlt />
             <span>+91 7829094405</span>
@@ -40,6 +52,15 @@ function Navbar() {
           >
             Book a Visit
           </Link>
+
+          <Link
+            to="/admin/login"
+            className="flex items-center gap-2 border border-blue-600 text-blue-600 px-5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition"
+          >
+            <FaUserShield />
+            Admin Login
+          </Link>
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -51,7 +72,7 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg border-t">
 
@@ -87,8 +108,9 @@ function Navbar() {
             Contact
           </Link>
 
-          <div className="px-6 py-4 border-b">
-            <div className="flex items-center gap-2 text-green-600 font-semibold mb-4">
+          <div className="px-6 py-4 border-b space-y-3">
+
+            <div className="flex items-center gap-2 text-green-600 font-semibold">
               <FaPhoneAlt />
               <span>+91 7829094405</span>
             </div>
@@ -96,10 +118,22 @@ function Navbar() {
             <Link
               to="/booking"
               onClick={() => setMenuOpen(false)}
-              className="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700"
+              className="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
             >
               Book a Visit
             </Link>
+
+            <Link
+              to="/admin/login"
+              onClick={() => setMenuOpen(false)}
+              className="block text-center border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition"
+            >
+              <div className="flex justify-center items-center gap-2">
+                <FaUserShield />
+                <span>Admin Login</span>
+              </div>
+            </Link>
+
           </div>
         </div>
       )}
