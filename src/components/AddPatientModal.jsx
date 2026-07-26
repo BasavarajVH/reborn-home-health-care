@@ -27,7 +27,7 @@ const AddPatientModal = ({ isOpen, onClose, onPatientAdded }) => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/patients", formData);
+      await axios.post("https://reborn-home-health-care-api.onrender.com/api/patients", formData);
 
       alert("Patient added successfully!");
 

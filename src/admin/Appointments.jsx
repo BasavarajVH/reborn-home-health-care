@@ -10,7 +10,7 @@ function Appointments() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings");
+      const res = await axios.get("https://reborn-home-health-care-api.onrender.com/api/bookings");
       setAppointments(res.data.appointments || []);
     } catch (err) {
       console.error("Error fetching appointments:", err);
@@ -19,7 +19,7 @@ function Appointments() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/bookings/${id}`, {
+      await axios.put(`https://reborn-home-health-care-api.onrender.com/api/bookings/${id}`, {
         status,
       });
 

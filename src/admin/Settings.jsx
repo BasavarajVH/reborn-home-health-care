@@ -30,7 +30,7 @@ function Settings() {
   const fetchProfile = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admin/profile",
+        "https://reborn-home-health-care-api.onrender.com/api/admin/profile",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ function Settings() {
 
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/admin/profile",
+        "https://reborn-home-health-care-api.onrender.com/api/admin/profile",
         profile,
         {
           headers: {
@@ -89,7 +89,7 @@ function Settings() {
 
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/admin/change-password",
+        "https://reborn-home-health-care-api.onrender.com/api/admin/change-password",
         {
           currentPassword: passwordData.currentPassword,
           newPassword: passwordData.newPassword,

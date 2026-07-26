@@ -32,7 +32,7 @@ function MonthlyChart() {
   const fetchAnalytics = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/analytics"
+        "https://reborn-home-health-care-api.onrender.com/api/analytics"
       );
 
       setMonthlyData(res.data.monthlyData || []);

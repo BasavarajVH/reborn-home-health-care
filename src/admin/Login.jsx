@@ -25,9 +25,10 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
-        formData
-      );
+  "https://reborn-home-health-care-api.onrender.com/api/admin/login",
+  formData
+);
+
 
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);

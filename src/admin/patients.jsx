@@ -24,7 +24,7 @@ const Patients = () => {
 
   const fetchPatients = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/patients");
+      const res = await axios.get("https://reborn-home-health-care-api.onrender.com/api/patients");
       setPatients(res.data.patients);
     } catch (err) {
       console.error(err);
@@ -43,7 +43,7 @@ const Patients = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/patients/${id}`);
+      await axios.delete(`https://reborn-home-health-care-api.onrender.com/api/patients/${id}`);
       alert("Patient deleted successfully.");
       fetchPatients();
     } catch (err) {

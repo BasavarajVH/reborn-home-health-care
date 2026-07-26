@@ -24,7 +24,7 @@ const EditPatientModal = ({ isOpen, onClose, patient, onUpdated }) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/patients/${patient.id}`,
+        `https://reborn-home-health-care-api.onrender.com/api/patients/${patient.id}`,
         formData
       );
 

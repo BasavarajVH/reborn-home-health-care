@@ -11,7 +11,7 @@ function RecentAppointments() {
   const fetchRecentAppointments = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/recent"
+        "https://reborn-home-health-care-api.onrender.com/api/recent"
       );
 
       if (res.data.success) {

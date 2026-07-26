@@ -24,7 +24,7 @@ function Booking() {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/bookings",
+      "https://reborn-home-health-care-api.onrender.com/api/bookings",
       formData
     );
 
