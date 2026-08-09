@@ -6,57 +6,65 @@ import SEO from "../components/SEO";
 function ServiceDetails() {
   const { slug } = useParams();
 
-  // Find the selected service
+  // Find selected service
   const service = services.find((item) => item.slug === slug);
 
   // Service-specific SEO data
   const seoData = {
     "patient-care": {
-      title: "Patient Care at Home",
+      seoTitle: "Best Patient Care at Home in Bengaluru",
+      h1: "Patient Care at Home in Bengaluru",
       description:
-        "Professional patient care services at home from Reborn Home Care. Get compassionate and personalized healthcare support for your loved ones.",
+        "Reborn Home Care provides compassionate patient care at home in Bengaluru with trained caregivers and personalized support for your loved ones.",
     },
 
     "elder-care": {
-      title: "Elder Care at Home",
+      seoTitle: "Best Elder Care at Home in Bengaluru",
+      h1: "Elder Care at Home in Bengaluru",
       description:
-        "Compassionate elder care services at home from Reborn Home Care, providing personalized support, assistance and comfort for senior citizens.",
+        "Reborn Home Care provides compassionate elder care at home in Bengaluru with personalized support, assistance and comfort for senior citizens.",
     },
 
     "cancer-care": {
-      title: "Cancer Patient Care at Home",
+      seoTitle: "Best Cancer Care at Home in Bengaluru",
+      h1: "Cancer Care at Home in Bengaluru",
       description:
-        "Compassionate home care support for cancer patients from Reborn Home Care, providing personalized assistance and comfort at home.",
+        "Reborn Home Care provides compassionate cancer patient care at home in Bengaluru with personalized assistance, comfort and healthcare support.",
     },
 
     "wound-care": {
-      title: "Wound Dressing at Home",
+      seoTitle: "Best Wound Care at Home in Bengaluru",
+      h1: "Wound Care at Home in Bengaluru",
       description:
-        "Professional wound dressing and wound care services at home from Reborn Home Care with trained healthcare professionals.",
+        "Reborn Home Care provides professional wound dressing and wound care at home in Bengaluru with trained healthcare professionals.",
     },
 
     "nursing-care": {
-      title: "Nurse Home Visit",
+      seoTitle: "Best Home Nursing Services in Bengaluru",
+      h1: "Home Nursing Services in Bengaluru",
       description:
-        "Book professional nurse home visits with Reborn Home Care for nursing assistance, healthcare support and personalized care at home.",
+        "Reborn Home Care provides professional home nursing services in Bengaluru with qualified nurses offering personalized healthcare support at home.",
     },
 
     "diabetes-care": {
-      title: "Diabetes Care at Home",
+      seoTitle: "Best Diabetes Care at Home in Bengaluru",
+      h1: "Diabetes Care at Home in Bengaluru",
       description:
-        "Home diabetes care services from Reborn Home Care, including monitoring, assistance and personalized support for patients at home.",
+        "Reborn Home Care provides diabetes care at home in Bengaluru, including monitoring, assistance and personalized support for patients.",
     },
 
     "physiotherapy": {
-      title: "Physiotherapy at Home",
+      seoTitle: "Best Physiotherapy at Home in Bengaluru",
+      h1: "Physiotherapy at Home in Bengaluru",
       description:
-        "Professional physiotherapy services at home from Reborn Home Care to support mobility, recovery, rehabilitation and better physical health.",
+        "Reborn Home Care provides professional physiotherapy at home in Bengaluru to support mobility, recovery, rehabilitation and physical well-being.",
     },
 
     "dementia-care": {
-      title: "Dementia Care at Home",
+      seoTitle: "Best Dementia Care at Home in Bengaluru",
+      h1: "Dementia Care at Home in Bengaluru",
       description:
-        "Compassionate dementia care and personalized home support from Reborn Home Care for patients and their families.",
+        "Reborn Home Care provides compassionate dementia care at home in Bengaluru with personalized support for patients and their families.",
     },
   };
 
@@ -84,23 +92,21 @@ function ServiceDetails() {
     );
   }
 
-  // Get SEO information for the current service
+  // Current service SEO information
   const currentSEO = seoData[slug] || {
-    title: service.title,
-    description:
-      service.description ||
-      `Learn more about ${service.title} from Reborn Home Care.`,
+    seoTitle: `${service.title} at Home in Bengaluru`,
+    h1: `${service.title} at Home in Bengaluru`,
+    description: `Reborn Home Care provides professional ${service.title.toLowerCase()} services at home in Bengaluru.`,
   };
 
   return (
     <div className="bg-gray-50">
-
       {/* =========================
           SEO
       ========================== */}
 
       <SEO
-        title={currentSEO.title}
+        title={`${currentSEO.seoTitle} | Reborn Home Care`}
         description={currentSEO.description}
         path={`/services/${service.slug}`}
         image={service.image}
@@ -113,14 +119,14 @@ function ServiceDetails() {
       <section className="relative">
         <img
           src={service.image}
-          alt={`${service.title} - Reborn Home Care`}
+          alt={`${currentSEO.h1} - Reborn Home Care`}
           className="w-full h-[400px] object-cover"
           loading="eager"
         />
 
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {service.title}
+            {currentSEO.h1}
           </h1>
 
           <p className="max-w-2xl text-lg">
@@ -135,7 +141,7 @@ function ServiceDetails() {
 
       <section className="max-w-7xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-blue-600 mb-6">
-          About {service.title}
+          About {currentSEO.h1}
         </h2>
 
         <p className="text-gray-700 leading-8 text-lg">
@@ -181,8 +187,6 @@ function ServiceDetails() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-
-            {/* Experienced Team */}
             <div className="bg-blue-50 p-6 rounded-xl shadow">
               <h3 className="font-bold text-xl mb-3">
                 Experienced Team
@@ -194,7 +198,6 @@ function ServiceDetails() {
               </p>
             </div>
 
-            {/* Affordable Care */}
             <div className="bg-blue-50 p-6 rounded-xl shadow">
               <h3 className="font-bold text-xl mb-3">
                 Affordable Care
@@ -206,7 +209,6 @@ function ServiceDetails() {
               </p>
             </div>
 
-            {/* 24x7 Support */}
             <div className="bg-blue-50 p-6 rounded-xl shadow">
               <h3 className="font-bold text-xl mb-3">
                 24×7 Support
@@ -217,7 +219,6 @@ function ServiceDetails() {
                 professional care at home.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -232,20 +233,17 @@ function ServiceDetails() {
         </h2>
 
         <div className="space-y-6">
-
-          {/* FAQ 1 */}
           <div className="bg-white shadow rounded-xl p-6">
             <h3 className="font-bold text-lg">
-              Is {service.title} available at home?
+              Is {currentSEO.h1} available at home?
             </h3>
 
             <p className="mt-2 text-gray-600">
               Yes. Reborn Home Care provides professional healthcare
-              services directly at your home.
+              services directly at your home in Bengaluru.
             </p>
           </div>
 
-          {/* FAQ 2 */}
           <div className="bg-white shadow rounded-xl p-6">
             <h3 className="font-bold text-lg">
               Are your healthcare professionals trained?
@@ -257,7 +255,6 @@ function ServiceDetails() {
             </p>
           </div>
 
-          {/* FAQ 3 */}
           <div className="bg-white shadow rounded-xl p-6">
             <h3 className="font-bold text-lg">
               How can I book this service?
@@ -268,7 +265,6 @@ function ServiceDetails() {
               Reborn Home Care by phone or WhatsApp.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -278,19 +274,16 @@ function ServiceDetails() {
 
       <section className="bg-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-
           <h2 className="text-4xl font-bold mb-4">
-            Need {service.title}?
+            Need {currentSEO.h1}?
           </h2>
 
           <p className="mb-8">
             Our healthcare team is ready to help you with professional
-            home healthcare support.
+            home healthcare support in Bengaluru.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-
-            {/* Booking */}
             <Link
               to="/booking"
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -298,7 +291,6 @@ function ServiceDetails() {
               Book Appointment
             </Link>
 
-            {/* WhatsApp */}
             <a
               href="https://wa.me/917829094405?text=Hello!%20I%20would%20like%20to%20book%20a%20home%20healthcare%20service."
               target="_blank"
@@ -310,7 +302,6 @@ function ServiceDetails() {
               WhatsApp
             </a>
 
-            {/* Phone */}
             <a
               href="tel:+917829094405"
               aria-label="Call Reborn Home Care"
@@ -319,11 +310,9 @@ function ServiceDetails() {
               <FaPhoneAlt />
               Call Now
             </a>
-
           </div>
         </div>
       </section>
-
     </div>
   );
 }
