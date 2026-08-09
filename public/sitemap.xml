@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.rebornhomecare.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.rebornhomecare.in/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rebornhomecare.in/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rebornhomecare.in/booking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rebornhomecare.in/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Patient Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/patient-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Elder Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/elder-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Cancer Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/cancer-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Wound Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/wound-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Nursing Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/nursing-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Diabetes Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/diabetes-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Physiotherapy -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/physiotherapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dementia Care -->
+  <url>
+    <loc>https://www.rebornhomecare.in/services/dementia-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

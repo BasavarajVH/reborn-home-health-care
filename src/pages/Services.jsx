@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import {
   FaUserNurse,
   FaWheelchair,
@@ -138,6 +139,13 @@ function Services() {
         </div>
 
       </div>
+
+      <SEO
+      title="Home Healthcare Services"
+      description="Explore Reborn Home Care services including patient care, elder care, cancer care, wound dressing, nurse home visits, diabetes care, physiotherapy and dementia care."
+      path="/services"
+      image="/images/patient-care.jpg"
+/>
     </section>
   );
 }
