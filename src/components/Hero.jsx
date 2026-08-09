@@ -2,24 +2,25 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="bg-blue-50 min-h-[80vh] flex items-center">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <section className="bg-blue-50">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
 
         {/* Left Content */}
         <div>
           <h1 className="text-5xl font-bold text-gray-900 leading-tight">
-            Compassionate Care,
-            <span className="text-blue-600">
-              {" "}Right at Your Doorstep.
+            Professional Home Healthcare
+            <span className="text-blue-600 block">
+              Services in Bengaluru
             </span>
           </h1>
 
-          <p className="mt-6 text-gray-600 text-lg">
-            Professional home healthcare services delivered by experienced
-            nurses and caregivers for your loved ones.
+          <p className="mt-6 text-gray-600 text-lg leading-8">
+            Compassionate home nursing, patient care, elder care and
+            physiotherapy services delivered by experienced nurses and
+            caregivers at your doorstep in Bengaluru.
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
 
             {/* Book Appointment */}
             <Link
@@ -44,7 +45,7 @@ function Hero() {
         <div>
           <img
             src="/hero.png"
-            alt="Healthcare"
+            alt="Home healthcare nurse providing elder care in Bengaluru"
             className="w-full"
           />
         </div>
