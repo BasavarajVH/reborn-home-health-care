@@ -14,16 +14,23 @@ function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.rebornhomecare.in/#organization",
+
     name: "Reborn Home Care",
+
     url: "https://www.rebornhomecare.in/",
+
     logo: "https://www.rebornhomecare.in/favicon.svg",
+
     description:
       "Reborn Home Care provides professional home nursing, patient care, elder care, physiotherapy, wound care and other home healthcare services in Bengaluru.",
+
     telephone: "+917829094405",
+
     areaServed: {
       "@type": "City",
       name: "Bengaluru",
     },
+
     serviceType: [
       "Home Nursing Care",
       "Patient Care",
@@ -38,9 +45,10 @@ function Home() {
 
   return (
     <>
+      {/* Homepage SEO */}
       <SEO
         title="Home Nursing & Elder Care Services in Bengaluru | Reborn Home Care"
-        description="Reborn Home Care provides professional home nursing, patient care, elder care, physiotherapy, wound care and other healthcare services at home in Bengaluru."
+        description="Reborn Home Care provides professional home nursing, patient care, elder care, physiotherapy, wound care and other home healthcare services at home in Bengaluru."
         path="/"
       />
 
